@@ -1,0 +1,28 @@
+nav {
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 1rem;
+}
+
+.nav-items > button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.nav-items > button.active {
+  color: var(--primary-color);
+}

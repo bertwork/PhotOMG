@@ -1,0 +1,71 @@
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+
+  background-color: currentColor;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+/* Navigation Icons */
+.nav-camera {
+  mask-image: url("../img/icons/camera-4-fill.svg");
+  -webkit-mask-image: url("../img/icons/camera-4-fill.svg");
+}
+
+.nav-photos {
+  mask-image: url("../img/icons/landscape-fill.svg");
+  -webkit-mask-image: url("../img/icons/landscape-fill.svg");
+}
+
+.nav-exit {
+  mask-image: url("../img/icons/close-line.svg");
+  -webkit-mask-image: url("../img/icons/close-line.svg");
+}
+
+/* Camera Screen */
+
+.camera-idle-content > button > .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.camera-lens {
+  mask-image: url("../img/icons/camera-lens-fill.svg");
+  -webkit-mask-image: url("../img/icons/camera-lens-fill.svg");
+}
+
+.preview-actions > button > .preview-discard {
+  color: var(--danger-color);
+}
+
+.preview-actions > button > .preview-retake {
+  width: 2rem;
+  height: 2rem;
+}
+
+.preview-actions > button > .preview-confirm {
+  color: var(--success-color);
+}
+
+.preview-discard {
+  mask-image: url("../img/icons/close-line.svg");
+  -webkit-mask-image: url("../img/icons/close-line.svg");
+}
+
+.preview-retake {
+  mask-image: url("../img/icons/camera-lens-fill.svg");
+  -webkit-mask-image: url("../img/icons/camera-lens-fill.svg");
+}
+
+.preview-confirm {
+  mask-image: url("../img/icons/check-fill.svg");
+  -webkit-mask-image: url("../img/icons/check-fill.svg");
+}

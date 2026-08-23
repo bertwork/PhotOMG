@@ -1,0 +1,125 @@
+@import url("./base.css");
+@import url("variables.css");
+@import url("./navigation.css");
+@import url("./icon.css");
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+main {
+  flex: 1;
+  padding: 1rem 1rem 0 1rem;
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: 36rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.camera-idle {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: end;
+  padding-bottom: 2rem;
+}
+
+.camera-idle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.camera-idle-content > p {
+  color: var(--text-muted);
+  animation: fadeIn 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    font-size: 1.125rem;
+  }
+}
+
+#camera-preview {
+  height: calc(100dvh - 5.5rem);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+}
+
+.preview-image {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 1rem;
+}
+
+.preview-image img {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.preview-actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 1rem 2.5rem 0;
+}
+
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+.thumbnail-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.thumbnail-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#gallery-empty {
+  height: 100%;
+  display: flex;
+  color: var(--text-muted);
+  align-items: center;
+  justify-content: center;
+}

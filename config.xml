@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bertqt.photomg" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>PhotOMG</name>
+    <description>
+        A camera app that saves photos to a local server.
+    </description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <icon src="res/icon.png" />
+
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <preference name="scheme" value="http" />
+    <preference name="hostname" value="localhost" />
+
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#121212" />
+    <preference name="AndroidWindowSplashScreenAnimationDuration" value="1000" />
+
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+</widget>

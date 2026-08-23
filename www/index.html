@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>PhotOMG</title>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Main Content -->
+      <main>
+        <!-- CAMERA SCREEN -->
+        <div id="camera-screen" class="screen container hidden">
+          <!-- Camera Idle -->
+          <div class="camera-idle">
+            <div class="camera-idle-content">
+              <p>Tap to open camera</p>
+              <button id="open-camera-btn" class="shutter-btn">
+                <span class="icon camera-lens"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Camera Captured Preview -->
+          <div id="camera-preview" class="camera-preview hidden">
+            <div class="preview-image">
+              <!-- Preview Image here -->
+            </div>
+
+            <!-- Image Preview Actions -->
+            <div class="preview-actions">
+              <button id="discard-btn" class="btn-discard">
+                <span class="icon preview-discard"></span>
+              </button>
+              <button id="retake-btn" class="btn-retake">
+                <span class="icon preview-retake"></span>
+              </button>
+              <button id="confirm-btn" class="btn-confirm">
+                <span class="icon preview-confirm"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Screen -->
+        <div id="gallery-screen" class="screen container">
+          <div id="gallery-empty" class="gallery-empty">No photo available</div>
+          <div id="gallery-grid" class="gallery-grid hidden">
+            <!-- Thumbnails get injected here by JS-->
+            <!-- <div class="thumbnail-placeholder">
+              <img src="" alt="">
+            </div> -->
+          </div>
+        </div>
+      </main>
+
+      <!-- Bottom Navigation -->
+      <nav>
+        <div class="nav-items container">
+          <button data-screen="camera-screen">
+            <span class="icon nav-camera"></span>
+            <span>Camera</span>
+          </button>
+          <button data-screen="gallery-screen" class="active">
+            <span class="icon nav-photos"></span>
+            <span>Photos</span>
+          </button>
+          <button id="exit-btn">
+            <span class="icon nav-exit"></span>
+            <span>Exit</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
