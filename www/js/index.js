@@ -5,7 +5,7 @@ import { setupNavigation, setupExit } from "./navigation.js";
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  console.log(`Running Cordova - ${cordova.platfromId} @${cordova.version}`);
+  console.log(`Running Cordova - ${cordova.platformId} @${cordova.version}`);
   initApp();
 }
 
